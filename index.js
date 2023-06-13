@@ -7,10 +7,10 @@ const breadRoutes = require("./routes/bread");
 
 const app = express();
 
-//middlewares
+// middlewares
 app.use(express.json());
 
-//routes
+// routes
 app.use("/breads", breadRoutes);
 
 // db connection

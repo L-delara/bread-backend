@@ -16,9 +16,19 @@ async function getBreadById(req, res) {
     const bread = await Bread.findById(id);
     res.json(bread);
   } catch (error) {
-    console.log("error fetching bread by id:", error);
+    console.log("error creating bread:", error);
     res.json({ message: "error fetching bread" });
   }
 }
 
-module.exports = { getAllBread, getBreadById };
+async function createBread(req, res) {
+  try {
+    await new Bread(req.body).save();
+    res.status(201).json({ message: "bread created" });
+  } catch (error) {
+    console.log("error creating bread:", error);
+    res.json({ message: "error creating bread" });
+  }
+}
+
+module.exports = { getAllBread, getBreadById, createBread };

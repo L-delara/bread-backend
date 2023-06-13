@@ -1,5 +1,9 @@
 const router = require("express").Router();
-const { getAllBread, getBreadById } = require("../controllers/bread");
+const {
+  getAllBread,
+  getBreadById,
+  createBread,
+} = require("../controllers/bread");
 
 //GET / all breads
 router.get("/", getAllBread);
@@ -8,6 +12,7 @@ router.get("/", getAllBread);
 router.get("/:id", getBreadById);
 
 //POST / create bread
+router.post("/", createBread);
 
 //
 
