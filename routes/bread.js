@@ -14,6 +14,8 @@ router.get("/:id", getBreadById);
 //POST / create bread
 router.post("/", createBread);
 
-//
+//PUT /:id  - update bread by id
+
+//DELETE /:id  - delete bread
 
 module.exports = router;
