@@ -11,7 +11,7 @@ const breadSchema = new mongoose.Schema({
   image: {
     type: String,
     default:
-      "https://img.freepik.com/premium-vector/cute-funny-bread-toast-character_92289-2249.jpg",
+      "https://i.pinimg.com/originals/ee/73/de/ee73de1d42c37ea4b6f8a544b9ad3091.jpg",
   },
   // baker: {
   //   type: mongoose.Types.ObjectId,
